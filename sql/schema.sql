@@ -85,7 +85,7 @@ CREATE TABLE 상품 (
     이름 VARCHAR2(20) NOT NULL,
     원가 NUMBER(10) NOT NULL,
     할인율 NUMBER(3, 2) DEFAULT 0 NOT NULL,
-    가격 NUMBER(10),
+    가격 NUMBER(10) NOT NULL,
     매장코드 CHAR(8) NOT NULL,
     CONSTRAINT 상품_pk PRIMARY KEY (상품코드),
     CONSTRAINT 상품_매장_fk FOREIGN KEY (매장코드)
