@@ -92,7 +92,7 @@ CREATE TABLE 상품 (
         REFERENCES 매장 (매장코드),
     CONSTRAINT 상품_원가_ck CHECK (원가 >= 0),
     CONSTRAINT 상품_할인율_ck CHECK (할인율 BETWEEN 0 AND 1),
-    CONSTRAINT 상품_가격_ck CHECK (가격 IS NULL OR 가격 >= 0)
+    CONSTRAINT 상품_가격_ck CHECK (가격 >= 0)
 );
 
 CREATE TABLE 구매 (
